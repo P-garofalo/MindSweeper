@@ -34,8 +34,8 @@ class EasyFragment : Fragment() {
     val tileTable = arrayOfNulls<Array<ImageView>>(rows)
     val mineTable = Array(rows) { BooleanArray(cols) }
 
-    val tileClickListener = View.OnClickListener {
-        Log.d(TAG, ": Tile ${it?.tag ?: "no tag"} clicked!")
+    val tileClickListener = { v: View ->
+        Log.d(TAG, ": Tile ${v.tag ?: "no tag"} clicked!")
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
